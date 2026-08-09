@@ -1,7 +1,16 @@
 aid: china-southern-air-logistics
 name: China Southern Air Logistics
-description: 'China Southern Air Logistics is a company surfaced via the API Evangelist harvest backlog
-  (source: secondary-market) and added to the network as a stub for full-pipeline profiling.'
+description: 'China Southern Air Logistics Co., Ltd. (南航物流, CSAL) is the air cargo and
+  logistics arm of China Southern Airlines, established in December 2018 and headquartered
+  in Guangzhou. It combines the airline''s freighter fleet with passenger belly capacity
+  into an integrated air logistics network, and sells express (CZ Speed), standard, special
+  cargo, whole-aircraft charter, intermodal truck and door-to-door products through its
+  Tang (唐翼) online cargo system at cargo.csair.com, where agents and shippers book capacity,
+  query freight rates, track air waybills, manage dangerous-goods accounts and request
+  invoices. As of this profile the company publishes no developer program, no public API
+  reference and no machine-readable specification; system-to-system integration is arranged
+  bilaterally with agents and forwarders.'
+image: https://cargo.csair.com/images/tab-icon.ico
 url: https://raw.githubusercontent.com/api-evangelist/china-southern-air-logistics/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +21,16 @@ created: '2026-08-09'
 modified: '2026-08-09'
 tags:
 - Company
+- Air Cargo
+- Air Freight
+- Logistics
+- Freight
+- Shipping
+- Transportation
+- Supply Chain
+- Aviation
+- China
+- Cargo Tracking
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +38,68 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/china-southern-air-logistics-domain-security.yml
+- type: LLMsTxt
+  name: Generated llms.txt for this company profile
+  url: llms/china-southern-air-logistics-llms.txt
 - type: Website
+  url: https://cargo.csair.com/pages/home
+- type: About
+  name: Company profile
+  url: https://cargo.csair.com/pages/CargoIntroduction.do
+- type: Support
+  name: Customer service and FAQ
+  url: https://cargo.csair.com/pages/questionAndAnswer.do
+- type: Contact
+  name: Contact information
+  url: https://cargo.csair.com/pages/contactInfo.do
+- type: SignUp
+  name: Register a cargo account
+  url: https://cargo.csair.com/pages/signupPersonal.do
+- type: Pricing
+  name: Freight rate query
+  url: http://cargo.csair.com/WebFace/Tang.WebFace.RatePolicy/FreightRateCN.aspx
+- type: PrivacyPolicy
+  url: https://cargo.csair.com/pages/privacyNotice.do
+- type: News
+  name: News and announcements
+  url: https://cargo.csair.com/pages/portalList.do
+- type: Tracking
+  name: Air waybill cargo tracking
+  url: http://cargo.csair.com/WebFace/Tang.WebFace.Cargo/AgentAwbBrower.aspx
+- type: ParentCompany
+  name: China Southern Air Holding Company
+  url: https://www.csairgroup.cn/en/
+- type: SecondaryMarket
+  name: Hiive secondary-market listing
   url: https://www.hiive.com/securities/china-southern-air-logistics-stock
+x-enrichment:
+  date: '2026-08-09'
+  status: minimal
+  artifacts_added: 2
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    The Tang (唐翼) cargo portal at cargo.csair.com is the company's only system surface and
+    it 302-redirects every unknown path back to /pages/home, so nothing under /.well-known/,
+    /openapi.json or /api-docs exists; the one developer-shaped host linked from its own
+    homepage, cargodev.csair.com, does not resolve in public DNS, and there is no developer
+    portal, API reference or SDK page anywhere on cargo.csair.com, tang.csair.com or
+    csairgroup.cn.
+  evidence:
+  - url: https://cargo.csair.com/pages/home
+    status: 200
+  - url: https://cargo.csair.com/openapi.json
+    status: 302
+  - url: https://cargo.csair.com/.well-known/agent-card.json
+    status: 302
+  - url: https://tang.csair.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.csairgroup.cn/openapi.json
+    status: 404
+  - url: https://cargodev.csair.com/publish_index/
+    status: 0
+  checked: '2026-08-09'
