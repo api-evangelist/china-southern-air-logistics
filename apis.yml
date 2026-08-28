@@ -10,6 +10,17 @@ description: 'China Southern Air Logistics Co., Ltd. (南航物流, CSAL) is the
   invoices. As of this profile the company publishes no developer program, no public API
   reference and no machine-readable specification; system-to-system integration is arranged
   bilaterally with agents and forwarders.'
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cargo.csair.com/images/tab-icon.ico
 url: https://raw.githubusercontent.com/api-evangelist/china-southern-air-logistics/refs/heads/main/apis.yml
 x-type: company
